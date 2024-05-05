@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product List</h1>
+
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Edit</td>
+        </tr>
+        <% products.forEach((product,i)=> { %>
+            <tr>
+                <td><%= product.name %></td>
+                <td><%= product.price %></td>
+                <td><%= product.description %></td>
+                <td><a href="/editProduct/<%= i %>">Edit</a></td>
+            </tr>
+          
+        <% }) %>
+    </table>
+
+</body>
+</html>

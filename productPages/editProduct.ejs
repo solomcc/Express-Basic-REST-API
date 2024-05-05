@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update Product</h1>
+
+    <form action="/editProduct/<%= id %>" method="post">
+        <div>
+
+            <label for="name1">Product Name</label>
+            <input type="text" id="name1" value="<%= product.name %>" name="name">
+        </div>
+        <div>
+            <label for="price1">Product Price</label>
+            <input type="number" name="price" value="<%= product.price %>" id="price1">
+        </div>
+        <div>
+            <label for="description1"></label>
+            <textarea name="description" id="description1"><%= product.description %></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
